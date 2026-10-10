@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica LocalStorage - Estructura Modular</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f4f4f9; color: #333; transition: 0.3s; }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        button { padding: 8px 15px; margin-top: 5px; cursor: pointer; }
+        .dark-mode { background-color: #121212; color: #fff; }
+        .dark-mode .card { background-color: #1e1e1e; color: #fff; }
+    </style>
+</head>
+<body id="cuerpoPagina">
+
+    <h1>Panel de Pruebas - LocalStorage</h1>
+    <p>Ejemplos modulares de persistencia de datos en JavaScript.</p>
+
+    <!-- EJEMPLO 1 -->
+    <div class="card">
+        <h3>Ejemplo 1: Preferencia de Tema (UI)</h3>
+        <p>Estado guardado: <span id="lblTema">Claro</span></p>
+        <button onclick="ejecutarEjemplo1()">Alternar Modo Oscuro / Claro</button>
+    </div>
+
+    <!-- EJEMPLO 2 -->
+    <div class="card">
+        <h3>Ejemplo 2: Serialización de Objetos (JSON.stringify / parse)</h3>
+        <button onclick="ejecutarEjemplo2()">Guardar y Leer Objeto</button>
+        <p id="lblObjeto">Resultado: Esperando acción...</p>
+    </div>
+
+    <!-- EJEMPLO 3 -->
+    <div class="card">
+        <h3>Ejemplo 3: Autoguardado de Formulario (Prevenir pérdida de datos)</h3>
+        <input type="text" id="txtInput" placeholder="Escribe algo..." oninput="ejecutarEjemplo3(this.value)">
+        <p>Guardado en vivo en LocalStorage: <span id="lblInput"></span></p>
+    </div>
+
+    <!-- Vinculamos los tres scripts externos -->
+    <script src="Ejemplo_1.js"></script>
+    <script src="Ejemplo_2.js"></script>
+    <script src="Ejemplo_3.js"></script>
+
+</body>
+</html>
